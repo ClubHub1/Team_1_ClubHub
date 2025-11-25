@@ -4,6 +4,14 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import vuetify from 'vite-plugin-vuetify'
+
+
+vuetify({
+  styles: {
+    configFile: 'src/sass/variables.scss',
+  },
+})
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -11,6 +19,7 @@ export default defineConfig({
     vue(),
     vueJsx(),
     vueDevTools(),
+    vuetify(),
   ],
   resolve: {
     alias: {
