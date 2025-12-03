@@ -37,10 +37,11 @@ MAIN PAGE STRUCTURE BEGINS HERE
               <v-btn
                 class="mt-auto"
                 append-icon="mdi-chevron-right"
-                color="blue-lighten-2"
+                variant="flat"
                 text="Register a Club"
-                variant="outlined"
                 width="300"
+                color="#041E42"
+                to='/register'
                 ></v-btn>
             </v-card-actions>
             </v-card>
