@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import App from './homepage.vue'
+import App from './main.vue'
 import { h } from 'vue'
 
 //Vuetify
@@ -10,9 +10,12 @@ import * as directives from 'vuetify/directives'
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
 
 //router
-import { createMemoryHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter } from 'vue-router'
 import HomePage from './homepage.vue'
 import LoginPage from './loginPage.vue'
+import EventsPage from './eventsPage.vue'
+import ClubsPage from './clubsPage.vue'
+import RegisterPage from './registerPage.vue'
 
 //import fonts
 import '@/plugins/fontSources'
@@ -26,10 +29,13 @@ import chLogoComponent from './components/icon.vue'
 const routes = [
   { path: '/', component: HomePage },
   { path: '/login', component: LoginPage },
+  { path: '/events', component: EventsPage},
+  { path: '/clubs', component: ClubsPage},
+  { path: '/register', component: RegisterPage}
 ]
 
 export const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes,
 })
 
