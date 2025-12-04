@@ -79,7 +79,7 @@ async function handleSubmit() {
     <v-main>
       <v-container>
         <v-row justify="center">
-          <v-col align-self="end">
+          <v-col align-self="end" cols="4">
             <v-card class = "bg-primary mt-10" height="500" width="400">
               <v-card-title class="ml-3 mt-3 mb-10">
                 <h1>Welcome <br/>
@@ -88,7 +88,7 @@ async function handleSubmit() {
             </v-card>
           </v-col>
 
-          <v-col>
+          <v-col cols="4">
             <v-card class = "mt-10" height="500" width="400" text>
               <v-card-title class="text-center">
                 <h2>Sign In</h2>
@@ -97,7 +97,7 @@ async function handleSubmit() {
               <v-container class="ml-3">
                 <!-- NOTE: @submit.prevent calls our handleSubmit -->
                 <v-form v-model="valid" class="mt-7" @submit.prevent="handleSubmit">
-                
+              
                   <v-row>
                     <v-text-field
                       v-model="email"
